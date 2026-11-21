@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePoint Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🏥 CarePoint</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#services">Services</a>
+            <a href="#booking">Appointment</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your Health, Our Priority</h1>
+            <p>
+                Find experienced doctors and book your appointment
+                with ease.
+            </p>
+            <a href="#booking" class="hero-btn">Book Appointment</a>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Our Services</h2>
+        <p class="section-subtitle">Care for every stage of life</p>
+
+        <div class="services">
+            <div class="service-card">
+                <span>🩺</span>
+                <h3>General Medicine</h3>
+                <p>Consultations for common health concerns.</p>
+            </div>
+
+            <div class="service-card">
+                <span>❤️</span>
+                <h3>Cardiology</h3>
+                <p>Heart health consultations and care.</p>
+            </div>
+
+            <div class="service-card">
+                <span>🧠</span>
+                <h3>Neurology</h3>
+                <p>Care for neurological health concerns.</p>
+            </div>
+
+            <div class="service-card">
+                <span>🦴</span>
+                <h3>Orthopedics</h3>
+                <p>Bone, joint and mobility consultations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section doctors-section" id="doctors">
+        <h2>Meet Our Doctors</h2>
+        <p class="section-subtitle">Choose a doctor for your consultation</p>
+
+        <div class="doctors" id="doctorList"></div>
+    </section>
+
+    <section class="section booking-section" id="booking">
+        <h2>Book an Appointment</h2>
+        <p class="section-subtitle">Fill in your details to schedule a visit</p>
+
+        <form id="appointmentForm">
+
+            <div class="form-group">
+                <label for="patientName">Patient Name</label>
+                <input
+                    type="text"
+                    id="patientName"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="patientEmail">Email</label>
+                <input
+                    type="email"
+                    id="patientEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="patientPhone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="patientPhone"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="doctorSelect">Select Doctor</label>
+                <select id="doctorSelect" required>
+                    <option value="">Choose a doctor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="appointmentDate">Appointment Date</label>
+                <input type="date" id="appointmentDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="appointmentTime">Appointment Time</label>
+                <select id="appointmentTime" required>
+                    <option value="">Choose a time</option>
+                    <option value="09:00 AM">09:00 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="02:00 PM">02:00 PM</option>
+                    <option value="03:00 PM">03:00 PM</option>
+                    <option value="04:00 PM">04:00 PM</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Book Appointment
+            </button>
+        </form>
+
+        <p id="bookingMessage"></p>
+    </section>
+
+    <section class="section appointments-section" id="appointments">
+        <h2>My Appointments</h2>
+        <p class="section-subtitle">View your saved bookings</p>
+
+        <div id="appointmentList"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CarePoint Hospital. Demo website for learning.</p>
+        <p>This website does not provide real medical services.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
